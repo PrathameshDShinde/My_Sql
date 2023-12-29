@@ -8,7 +8,7 @@ select emp_no,avg(salary) as avg_salary from salaries group by emp_no order by a
 select emp_no,count(salary) as count_salary from salaries where emp_no = 14121;
 select emp_no,count(salary) as count_salary from salaries group by emp_no;
 
-											-- Rank and Dense Rank --
+					      -- Rank and Dense Rank --
 select emp_no,salary,rank() over() as rank_ from salaries;
 select emp_no,salary,rank() over(partition by emp_no order by salary) as rank_ from salaries where emp_no like 11839 ;
 select emp_no,salary,dense_rank() over(partition by emp_no order by salary) as dense_ from salaries where emp_no like 11839 ;
@@ -26,7 +26,7 @@ select count(gender) as count_gender from employees group by gender;
 select count(last_name) as count_ln from employees where last_name like 'Facello' group by last_name ;
 select Gender,count(hire_date) as count_hd from employees where hire_date like '1986-06-26' group by Gender;
 
-#### Aggregte Functions ####
+						#### Aggregte Functions ####
 select *,max(salary) over(partition by emp_no) max_salary,
 min(salary) over(partition by emp_no) min_Salary 
 from salaries;
@@ -42,7 +42,7 @@ select first_name,last_name,emp_no,
 if(gender = 'M','Male','Female') as Gender
 from employees;
 
-#### case statement ####
+						   #### case statement ####
 select emp_no,first_name,last_name,
 case gender when 'M' then 'Male' 
 else 'Female' end as gender from employees;
