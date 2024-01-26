@@ -29,7 +29,7 @@ This repository contains a series of SQL exercises to help you practice and impr
 To get started, clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/AvinashDarekar/sql-exercise-repository.git
+git clone https://github.com/PrathameshDShinde/My_Sql-repository.git
 ```
 
 Navigate to the repository and explore the exercises in the relevant folders. Each exercise may include SQL scripts, sample data, and instructions to guide you through the process.
